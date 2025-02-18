@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Hanalei+Fill&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet"> -->
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- BoxIcons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Systementor Zoo</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+            <img src="images/szlogo1_processed.png" alt="Systementor Zoo">
+            </a>
+        </div>
+        <div class="nav-items">
+            <a href="prices.html">BILJETTER & PRISER</a>
+            <a href="contact.html">KONTAKT</a>
+            <a href="map.html"><i class="fa-solid fa-location-dot"></i> HITTA HIT 
+            </a>
+        </div>
+    </nav>
+
+    <div id="food-page">
+    <section id="restaurants">
+        <h2>Våra Restauranger</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="/images/restaurant1.jpg" alt="Restaurang Tropik">
+                <div class="info">
+                    <h3>Restaurang Tropik</h3>
+                    <p>En mysig restaurang med utsikt över sjön. Serverar lokala rätter och barnmeny.</p>
+                    <p><strong>Öppettider:</strong> 11:00 - 17:00</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/images/lake-cafe.jpg" alt="Sjöcaféet">
+                <div class="info">
+                    <h3>Sjöcaféet</h3>
+                    <p>Perfekt för en fika eller lättare lunch nära vattnet.</p>
+                    <p><strong>Öppettider:</strong> 9:00 - 17:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="picnic-areas">
+        <h2>Picknickplatser</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="/images/parkbord.jpg" alt="Grillplats vid Eklunden">
+                <div class="info">
+                    <h3>Grillplats vid Eklunden</h3>
+                    <p>En populär plats med grillmöjligheter och stora bord för hela familjen.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/images/blommor2.jpg" alt="Blomsterängen">
+                <div class="info">
+                    <h3>Blomsterängen</h3>
+                    <p>Njut av medhavd mat i en vacker miljö med utsikt över blomsterängarna.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="map">
+        <h2>- KARTA ÖVER PARKEN -</h2>
+        <p>Upptäck våra restauranger och matplatser på kartan nedan:</p>
+    </div>
+    <div class="map-container">
+        <img src="images/zooKarta.png" alt="Karta över parken">
+    </div>
+</section>
+</div>
+    
+<footer>
+    <div class="logo">
+        <img src="images/szlogo1_processed.png" alt="Systementor Zoo" class="logo-small">
+    </div>
+    <div class="footer-container">
+        <ul class="social-links">
+            <li><a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'></i>
+                </a></li>
+            <li><a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook-square'></i>
+                </a></li>
+        </ul>
+        <p>&copy; 2025 Systementor Zoo. All rights reserved.</p>
+
+        <button id="subscribe-button" class="floating-btn">Få vårt nyhetsbrev!</button>        </div>
+</footer>
+
+<div id="popup-form" class="popup" style="display: none;">
+    <form id="subscriptionForm">
+        <h2>Prenumerera på vårt nyhetsbrev</h2>
+        <label for="firstname">Förnamn</label>
+        <input type="text" id="firstname" name="firstname" required>
+        <label for="lastname">Efternamn</label>
+        <input type="text" id="lastname" name="lastname" required>
+        <label for="email">E-postadress</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Prenumerera</button>
+    </form>
+</div>
+
+<!-- Overlay -->
+<div id="overlay" class="overlay" style="display: none;"></div>
+
+<script src="js/scripts.js"></script>
+
+</body>
+
+</html>

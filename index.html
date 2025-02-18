@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ 
+        <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Hanalei+Fill&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- BoxIcons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Systementor Zoo</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/szlogo1_processed.png" alt="Systementor Zoo">
+            </a>
+        </div>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger-menu">☰</label>
+
+        <div class="nav-items">
+            <a href="prices.html">BILJETTER & PRISER</a>
+            <a href="contact.html">KONTAKT</a>
+            <a href="map.html"><i class="fa-solid fa-location-dot"></i> HITTA HIT
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero-home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-heading">Systementor Zoo</h1>
+                <a href="#features" class="cta-button">BESÖK OSS!</a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="features">
+        <div class="feature">
+            <div class="feature-image">
+                <img src="images/gorilla.avif" alt="Våra djur">
+                <div class="overlay">
+                    <h2>Våra djur</h2>
+                    <p>Upptäck alla våra fantastiska djur som bor på Systementor Zoo.</p>
+                    <a href="animals.html" class="button">Läs mer</a>
+                </div>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="feature-image">
+                <img src="images/matadjur2.jpg" alt="Aktiviteter i parken">
+                <div class="overlay">
+                    <h2>Aktiviteter</h2>
+                    <p>Delta i våra dagliga aktiviteter och upplev en oförglömlig dag.</p>
+                    <a href="todo.html" class="button">Läs mer</a>
+                </div>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="feature-image">
+                <img src="images/fika2.jpg" alt="Mat och servering">
+                <div class="overlay">
+                    <h2>Äta här</h2>
+                    <p>Upptäck våra matställen och njut av allt från goda luncher i våra restauranger till picknick i parken.</p>
+                    <a href="food.html" class="button">Läs mer</a>
+                </div>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="feature-image">
+                <img src="images/hittahit1.jpg" alt="Hitta hit">
+                <div class="overlay">
+                    <h2>Hitta hit</h2>
+                    <!-- <p>Få all information om hur du hittar till Systementor Zoo.</p> -->
+                    <a href="map.html" class="button">Läs mer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="logo">
+            <img src="images/szlogo1_processed.png" alt="Systementor Zoo" class="logo-small">
+        </div>
+        <div class="footer-container">
+            <ul class="social-links">
+                <li><a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'></i>
+                    </a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook-square'></i>
+                    </a></li>
+            </ul>
+            <p>&copy; 2025 Systementor Zoo. All rights reserved.</p>
+
+            <button id="subscribe-button" class="floating-btn">Få vårt nyhetsbrev!</button>        </div>
+    </footer>
+
+    <div id="popup-form" class="popup" style="display: none;">
+        <form id="subscriptionForm">
+            <h2>Prenumerera på vårt nyhetsbrev</h2>
+            <label for="firstname">Förnamn</label>
+            <input type="text" id="firstname" name="firstname" required>
+            <label for="lastname">Efternamn</label>
+            <input type="text" id="lastname" name="lastname" required>
+            <label for="email">E-postadress</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Prenumerera</button>
+        </form>
+    </div>
+    
+    <div id="overlay" class="overlay" style="display: none;"></div>
+
+<script src="js/scripts.js"></script>
+</body>
+
+</html>

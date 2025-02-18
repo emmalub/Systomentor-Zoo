@@ -1,0 +1,1135 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    background-size: cover;
+    font-family: "Overpass", sans-serif;
+    background-position: center;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+nav {
+    height: 80px;
+    background-color: rgb(139, 135, 112, 0.756);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left:0;
+    z-index: 1000;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right:50px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.logo {
+    color: #f7f7f7;
+    text-transform: uppercase;
+    padding-left: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.logo img.logo-small {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+nav a {
+    color: #e2decc;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #f2eede; 
+}
+
+
+
+.hero {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    height: auto;
+}
+
+.hero-container {
+    text-align: center;
+    padding: 3rem calc((100vw - 1300px) / 2);
+    width: 100%;
+    max-width: 1300px;
+    margin-top: 50px;
+
+}
+
+.hero-content {
+    color: #6c6742;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+
+.hero-home {
+    background-image: url('../images/silkesapa1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 0rem;
+    color: #ada98a;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-home .hero-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.hero-home .cta-button {
+    display: inline-block;
+    margin-top: 0;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #ff6f61; 
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-home .cta-button:hover {
+    background-color: #ff3b2d; 
+}
+
+.hero-home .hero-heading {
+    font-family: "Hanalei Fill", sans-serif;
+    color: #ffffff;
+    font-size: 6rem;
+    margin-top: 26rem;
+}
+
+#features {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.feature {
+    position: relative;
+    width: 350px;
+    height: 300px;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+}
+
+.feature.active .overlay {
+    opacity: 1; 
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.feature .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 10px;
+}
+
+.feature .overlay h2 {
+    font-size: 2.5em;
+    margin: 10px 0;
+    color: #6c6742;
+}
+
+.feature .overlay p {
+    font-size: 1.2em;
+    color: #524e32;
+    margin: 10px 0;
+    width: 80%;
+}
+
+.feature .text-content {
+    padding: 10px;
+    font-size: 1.2em;
+    color: #524e32;
+    background-color: #fff; 
+    text-align: center;
+    flex: 0;
+    display: none; 
+}
+
+.feature .overlay .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #ff6347;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.feature .overlay .button:hover {
+    background-color: #fa9c8c;
+}
+
+.feature:hover img {
+    opacity: 1;
+}
+
+.feature:hover .overlay {
+    opacity: 1; 
+}
+
+
+button {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border: none;
+    background: #ff6347;
+    color: #ffffff;
+    transition: 0.2s ease-out;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 30px;
+    /* opacity: 0.8; */
+    /* transition: opacity 0.3s; */
+    font-family: 'Overpass', sans-serif;
+}
+
+button:hover {
+    background: #d3614d;
+    color: #f2e7e3;
+    opacity: 0.9;
+}
+
+.column-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+}
+
+.myTitle {
+    font-family: "Hanalei Fill", sans-serif;
+    color: #ada98a;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 50px;
+}
+
+h1 {
+    font-family: "Hanalei Fill", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #8b8770;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Overpass", sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    color: #8b8770;
+    text-align: center;
+}
+
+h3 {
+    font-family: "Overpass", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #8b8770;
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+
+p {
+    font-family: "Overpass", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #9c987d;
+    text-align: center;
+    padding: 0 11rem;
+    margin-top: 0;
+}
+
+ul {
+    color: #8b8770;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1efe8;
+    text-align: left;
+}
+.card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-bottom: 1px solid #ddd;
+}
+
+.card .info {
+    padding: 15px;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.card p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+
+#activities {
+    scroll-margin-top: 80px; 
+    padding: 50px 20px; 
+    background-color: #f9f9f9; 
+}
+
+#activities-page .hero {
+    background-image: url('../images/zoo-activity1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    text-align: left;
+    padding: 0 5%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#activities-page .hero-content {
+    z-index: 2;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+#activities-page .activities-hero h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    max-width: 400px; 
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+#activities-page .cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ff6f61; 
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#activities-page .cta-button:hover {
+    background-color: #ff3b2d; 
+}
+
+
+.activities-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.activity-card {
+    background-color: #dddbd4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.activity-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.activity-card h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    opacity: 70%;
+}
+
+
+#food-page section {
+    margin: 10px 0;
+    background-color: #fdfdfd;
+}
+
+#food-page h2 {
+    font-family: "Hanalei Fill", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #908c75;
+    padding-top: 100px;
+    text-align: center;
+    margin-bottom: 20px;
+    color:#676348
+}
+
+#food-page h3{
+    padding-top: 0px;
+    color:#524e32
+}
+
+#food-page p{
+    text-align: center;
+    padding: 0;
+}
+
+
+.tickets-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+    padding: 60px;
+    margin-bottom: 0;
+    min-height: 50vh;
+    
+}
+.tickets h1 {
+    margin-top: 120px;
+    color:#827e60;
+    font-family: "Hanalei Fill", sans-serif;
+    font-size: 4rem;
+}
+
+.ticket-card {
+    background-image: url('../images/jungle.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    height: 300px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.ticket-card:hover {
+    transform: scale(1.05);
+}
+
+
+.ticket-card h3 {
+    margin-top: 30%;
+    color:#ffffff;
+    font-size: 1.2em;
+}
+
+.ticket-card p {
+    color:#ffffff;
+    margin: 10px 0;
+    padding: 5%;
+    font-size: 1em;
+}
+
+.price {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #ec7964;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    background-color:#d3614d;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color:#ec7964;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    padding: 10px 10%;
+}
+
+.map-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+iframe {
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #8b8770;
+    color: #EBDEF2;
+    text-align: center;
+    padding: 1rem 0;
+    /* position: fixed; */
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.social-links a {
+    color: #EBDEF2;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #EBDEF2;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+.contact-form {
+    background-color: #e2decc;
+    padding: 2rem;
+    max-width: 80%;
+    margin: 8rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: #8b8770;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #8b8770;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 95%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #6c6742;
+    outline: none;
+}
+
+button-contact {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #d3614d;
+    color: #ffffff;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+button-contact:hover {
+    background-color: #ec7964;
+}
+
+.animals-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+.animal-item {
+    width: calc(25% - 1rem); 
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.animal-item img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.animal-item:hover img {
+    transform: scale(1.1); 
+}
+
+.animal-item a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.animal-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.animal-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.3rem;
+   text-decoration: none;
+
+}
+
+/* Animal species */
+.animal-species {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0;
+    text-align: left;
+}
+
+/* Hover effect on the entire card */
+.animal-item:hover {
+    transform: translateY(-10px); /* Flytta kortet upp vid hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Större skugga vid hover */
+}
+
+/* .animals-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding: 0;
+    gap: 1rem; 
+    width: 100%;
+
+}
+
+.animal-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: calc(25% - 2rem); 
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.animal-item img {
+    width: 400px;
+    height: 450px; 
+    object-fit: cover;
+    /* display: block; */
+    /* transition: opacity 1.5s ease;
+    border-radius: 15px; 
+}
+
+.animal-item a {
+    position: relative;
+    display: block;
+}
+
+.animal-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.animal-item:hover .overlay {
+    opacity: 1;
+}
+
+.animal-item p {
+    text-align: left;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    line-height: 1.5;
+    width: 100%; 
+    margin-left: 0; 
+}
+
+.animal-item p em {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #666;
+}
+
+.animal-item:hover img {
+    opacity: 0.7; 
+} */ 
+
+.floating-btn {
+    position: fixed; 
+    bottom: 2rem; 
+    right: 2rem; 
+    background-color: #ff6347; 
+    color: white; 
+    padding: 1rem 1.5rem; 
+    border-radius: 50px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    text-decoration: none; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    transition: all 0.3s ease;
+}
+
+.floating-btn:hover {
+    background-color: #d3614d; /* Byter färg vid hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ökad skugga vid hover */
+}
+
+.popup {
+    display: none; /* Dold som standard */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ligger ovanpå annat innehåll */
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup form input,
+.popup form button {
+    margin: 0.5rem 0;
+}
+
+.popup.active {
+    display: block; /* Visar popup när den är aktiv */
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+.overlay.active {
+    display: block;  
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.5rem; 
+    }
+
+    h3, p {
+        font-size: 1rem; 
+        line-height: 1.5;
+    }
+
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        right: 4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #f7f7f7; 
+        font-size: 2rem;
+    }
+
+    .nav-items {
+        display: none; 
+        flex-direction: column; 
+        background-color: rgb(139, 135, 112, 0.756);
+        position: absolute;
+        top: 85px;
+        right: 0;
+        width: 100%;
+        padding: 0.2rem 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+        border-radius: 5px; 
+    }
+
+
+    #menu-toggle:checked + .hamburger-menu + .nav-items {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-image: url('../images/hero.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        color: white;
+    }
+    
+    .hero h1, h2 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+        padding: 2%;
+        margin-bottom: 20px;
+    }
+
+
+
+    #features {
+        display: flex;
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
+        padding: 10px;
+        width: 440px; 
+        height: 200px; 
+    }
+
+    .feature {
+        flex: 0 0 auto; 
+        width: 100px; 
+        height: 100px; 
+        margin: 0; 
+        overflow: hidden;
+        border-radius: 10px;
+        flex-direction: column;
+    }
+
+    .feature img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.3s ease;
+    }
+    .feature .text-content {
+        display: block;   
+    }
+
+    .feature .overlay {
+        opacity: 1;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .contact-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+
+    button-contact {
+        font-size: 1rem;
+    }
+    
+    nav {
+        padding: 0 1rem;
+    }
+
+    .nav-items {
+        flex-direction: row;  
+        align-items: right; 
+        width: 80%; /* Ge länkarna full bredd */
+    }
+
+    nav a {
+        padding: 0.5rem; /* Mer utrymme mellan länkar */
+        font-size: 1.2rem; /* Större fontstorlek på små skärmar */
+    }
+
+    .hero-home .hero-heading {
+        font-size: 3rem;
+    }
+   
+    .animal-table thead {
+        display: none;
+    }
+
+    .animal-table tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .animal-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        font-size: 16px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .animal-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-right: 10px;
+        color: #4CAF50;
+    }
+
+    .animal-table td:last-child {
+        border-bottom: none;
+    }
+
+    .animal-item {
+        width: calc(50% - 1rem); /* Två i bredd på mindre skärmar */
+    }
+    .tickets-container {
+        display: flex;
+        flex-wrap: nowrap; /* Gör att kort inte radbryts */
+        overflow-x: auto; /* Gör sektionen horisontellt bläddringsbar */
+        padding: 10px; /* Mindre padding på små skärmar */
+        padding-left: 0;
+    }
+    .ticket-card {
+        flex: 0 0 auto; /* Förhindrar att korten ändrar storlek för att fylla raden */
+        width: 250px; /* Fast bredd för att hålla dem konsistenta */
+        height: 300px; /* Bevara höjden */
+    }
+    /* Liten anpassning för textstorlek och layout */
+    .ticket-card h3 {
+        font-size: 1em;
+        margin-top: 20%;
+    }
+
+    .ticket-card p {
+        font-size: 0.9em;
+    }
+
+    .price {
+        font-size: 1.2em;
+    }
+
+    .animal-item { /* Anpassa kort för aktiviteter och djur */
+        flex: 0 0 auto; /* Förhindrar att korten ändrar storlek för att fylla raden */
+        width: 10em; /* Gör dem smalare på mindre skärmar */
+        height: 10em; /* Låt höjden anpassa sig efter innehållet */
+        border-radius: 5px;
+    }
+    
+    .animals-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 0fr)); /* Anpassa till skärmen */
+        margin: 10px;
+        padding: 0;
+    }
+    .animal-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+   
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 1rem;  
+    }
+    .feature {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .feature img {
+        height: 180px; 
+    }
+
+    .feature .overlay h2 {
+        font-size: 1.5em; 
+    }
+
+    .feature .overlay p {
+        font-size: 0.9em; 
+    }
+
+    .feature .overlay .button {
+        font-size: 0.8em; 
+    }
+}
